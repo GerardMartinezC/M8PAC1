@@ -40,11 +40,14 @@ function App() {
   });
 
   return (
-    <div>   
-
+    <div>
       <h1>To-Do List</h1>
+      <div>
+        <button onClick={() => handleFilterChange('all')}>Todas</button>
+        <button onClick={() => handleFilterChange('completed')}>Completadas</button>
+        <button onClick={() => handleFilterChange('pending')}>Pendientes</button>
+      </div>
       <TaskList tasks={filteredTasks} deleteTask={deleteTask} toggleComplete={toggleComplete} />
-      {/* Aquí irían los botones para filtrar */}
     </div>
   );
 }
